@@ -28,35 +28,35 @@ Aplicación GUI moderna para encriptar y desencriptar archivos usando **AES-256 
 git clone https://github.com/tuusuario/encdes.git
 cd encdes
 
-# 2. Crear entorno virtual (Windows)
+## 2. Crear entorno virtual (Windows)
 python -m venv venv
 .\venv\Scripts\activate
 
-# 2. Crear entorno virtual (Linux/Mac)
+## 2. Crear entorno virtual (Linux/Mac)
 python3 -m venv venv
 source venv/bin/activate
 
-# 3. Instalar dependencias
+## 3. Instalar dependencias
 pip install -r requirements.txt
 
-# 4. Ejecutar la aplicación
+## 4. Ejecutar la aplicación
 python main.py
 🖥️ Uso Básico
 Seleccionar archivo(s) usando el explorador integrado
 
-Elegir operación:
+## Elegir operación:
 
 🛡️ Encriptar: Genera archivo .enc
 
 🔓 Desencriptar: Elimina extensión .enc
 
-Ejemplo de flujo:
+## Ejemplo de flujo:
 
 plaintext
 Copy
 documento.txt ➔ Encriptar ➔ documento.txt.enc
 documento.txt.enc ➔ Desencriptar ➔ documento.txt
-🧠 Detalles Técnicos
+## 🧠 Detalles Técnicos
 🔧 Especificaciones de Encriptación
 Parámetro	Valor
 🧬 Algoritmo	AES-256
@@ -64,7 +64,7 @@ Parámetro	Valor
 🧩 Padding	PKCS7
 🔑 Longitud clave	32 bytes (256 bits)
 🎲 IV	16 bytes aleatorios
-📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto
 bash
 Copy
 .
@@ -72,12 +72,12 @@ Copy
 ├── 🎨 my.kv              # Diseño de interfaz
 ├── 📦 requirements.txt   # Dependencias
 └── 📖 README.md          # Documentación
-📚 Dependencias
+## 📚 Dependencias
 Librería	Versión	Propósito	Badge
 Kivy	2.3.1	Interfaz gráfica	Kivy
 Cryptography	44.0.0	Implementación AES	Cryptography
 PyInstaller	6.11.1	Generación ejecutables	PyInstaller
-📦 Compilación a Ejecutable
+## 📦 Compilación a Ejecutable
 bash
 Copy
 pyinstaller --onefile --windowed \
@@ -85,31 +85,31 @@ pyinstaller --onefile --windowed \
 --add-data "my.kv:." \
 --icon=assets/icon.ico \
 main.py
-🤝 Contribución
-🍴 Haz fork del proyecto
+## 🤝 Contribución
+### 🍴 Haz fork del proyecto
 
-🌿 Crea tu rama:
+### 🌿 Crea tu rama:
 
 bash
 Copy
 git checkout -b feature/nueva-funcion
-💾 Commit cambios:
+## 💾 Commit cambios:
 
 bash
 Copy
 git commit -m 'Añade nueva función'
-⬆️ Push a la rama:
+## ⬆️ Push a la rama:
 
 bash
 Copy
 git push origin feature/nueva-funcion
-📤 Abre un Pull Request
+## 📤 Abre un Pull Request
 
-⚖️ Licencia
-Distribuido bajo licencia MIT.
+## ⚖️ Licencia
+### Distribuido bajo licencia MIT.
 
-⚠️ Importante de Seguridad
-Warning
+## ⚠️ Importante de Seguridad
+### Warning
 Este proyecto usa una clave fija para demostración.
 No utilizar con datos sensibles sin implementar:
 
@@ -119,7 +119,7 @@ Rotación de IVs
 
 Validación de integridad
 
-🚧 Futuras Mejoras
+## 🚧 Futuras Mejoras
 Prioridad	Función	Estado
 🔴 Alta	Gestión de claves seguras	🚧 En desarrollo
 🟡 Media	Soporte multi-algoritmo	📅 Planeado
