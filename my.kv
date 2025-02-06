@@ -1,0 +1,54 @@
+<MyWidget>:
+    orientation: 'vertical'
+    filechooser: filechooser
+    result_label: result_label
+    
+    FileChooserIconView:
+        id: filechooser
+        size_hint: (1, 0.8)  # Asegura que el FileChooser ocupe espacio
+    
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, None)
+        height: 50
+
+        Label:
+            size_hint_x: 0.25
+        
+        Button:
+            text: 'Seleccionar Archivo'
+            size_hint: (0.5, 1)
+            on_press: root.select_file(self)  # Corregido: root en lugar de app
+        
+        Label:
+            size_hint_x: 0.25
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, None)
+        height: 20  # Espacio adicional para separación
+    
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: (1, None)
+        height: 50
+        spacing: 10
+        padding: [10, 0, 10, 0]
+        
+        Button:
+            text: 'Encriptar'
+            size_hint: (0.3, 1)
+            background_color: [0, 0, 1, 1]
+            on_press: root.encrypt_file(self)  # Corregido
+        
+        Button:
+            text: 'Desencriptar'
+            size_hint: (0.3, 1)
+            background_color: [1, 0, 0, 1]
+            on_press: root.decrypt_file(self)  # Corregido
+    
+    Label:
+        id: result_label
+        text: ''
+        size_hint: (1, None)
+        height: 30
